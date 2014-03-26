@@ -148,7 +148,7 @@ repos.on('push', function(push) {
 						sha1 : 'tarball',
 						instances : '8111b85a',
 						executableFile : '???',
-						executableUri : "http://localhost:3000/" + push.commit + '.tgz',
+						executableUri : "http://localhost:7001/" + push.commit + '.tgz',
 						name : push.repo,
 						uris : [push.repo + ".mangoraft.ca"],
 						env : {
@@ -193,4 +193,4 @@ server.listen(7000);
 
 var app = module.exports = express.createServer(express.static(__dirname + '/public'));
 
-app.listen(3000)
+app.listen(7001)
